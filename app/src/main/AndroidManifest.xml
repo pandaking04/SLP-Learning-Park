@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.museum4life">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <uses-feature
+        android:name="android.hardware.camera.ar"
+        android:required="true" />
+    <uses-feature
+        android:glEsVersion="0x00030000"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Museum4Life">
+        <activity
+            android:name=".finish"
+            android:exported="false" />
+        <activity
+            android:name=".info_with_ar"
+            android:exported="false" />
+        <activity
+            android:name=".ancient_building"
+            android:exported="false" />
+        <activity
+            android:name=".model_ar"
+            android:exported="false" />
+        <activity
+            android:name=".Info"
+            android:exported="false" />
+        <activity
+            android:name=".QRCodeScanner"
+            android:exported="false" />
+        <activity
+            android:name=".map_info"
+            android:exported="false" />
+        <activity
+            android:name=".plant_building"
+            android:exported="false" />
+        <activity
+            android:name=".butterfly_building"
+            android:exported="false" />
+        <activity
+            android:name=".credit"
+            android:exported="false" />
+        <activity
+            android:name=".Review"
+            android:exported="false" />
+        <activity
+            android:name=".SLP_Template"
+            android:exported="false" />
+        <activity
+            android:name=".Edit_Profile"
+            android:exported="false" />
+        <activity
+            android:name=".ancient_zone_6"
+            android:exported="false" />
+        <activity
+            android:name=".Forget"
+            android:exported="false" />
+        <activity
+            android:name=".Model"
+            android:exported="false" />
+        <activity
+            android:name=".Loading"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ancient_detail"
+            android:exported="false" />
+        <activity
+            android:name=".ancient_zone_1"
+            android:exported="false" />
+        <activity
+            android:name=".ancient_map"
+            android:exported="false" />
+        <activity
+            android:name=".Ancient"
+            android:exported="false" />
+        <activity
+            android:name=".activity_map"
+            android:exported="false" />
+        <activity
+            android:name=".Profile"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.ar.core"
+            android:value="required" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

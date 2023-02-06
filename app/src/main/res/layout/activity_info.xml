@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Info"
+    android:id="@+id/drawer_layout"
+    android:background="@color/museum">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/square_bg">
+
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/museum"
+                    android:minHeight="?attr/actionBarSize"
+                    android:theme="?attr/actionBarTheme" />
+
+                <ImageButton
+                    android:id="@+id/back_btn"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/museum"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/new_back" />
+
+                <ImageButton
+                    android:id="@+id/audio_btn"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_baseline_volume_white"
+                    android:background="@color/museum"
+                    android:layout_marginLeft="350dp"/>
+
+
+
+
+
+
+
+
+            </RelativeLayout>
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_marginBottom="40dp"
+        android:id="@+id/things_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Test"
+        android:textSize="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="85dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:layout_marginBottom="15dp"
+        android:id="@+id/things_img"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_below="@+id/things_name"
+        android:src="@drawable/butterfly_preview"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/things_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/things_img"
+        android:textColor="@color/black"
+        android:textAlignment="textStart"
+        android:textSize="15dp"/>
+
+
+
+
+</RelativeLayout>

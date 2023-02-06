@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SLP_Template"
+
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/foreground"
+        android:backgroundTint="#E9FFFFFF"
+        android:backgroundTintMode="src_over"
+        android:orientation="vertical">
+
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/museum"
+                    android:minHeight="?attr/actionBarSize"
+                    android:theme="?attr/actionBarTheme" />
+
+                <ImageButton
+                    android:id="@+id/back_btn"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/museum"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/new_back" />
+
+                <TextView
+                    android:id="@+id/zone_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Zone"
+                    android:textColor="@color/white"
+                    android:textSize="25dp" />
+
+
+            </RelativeLayout>
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ImageView
+            android:id="@+id/image_preview"
+            android:layout_width="380dp"
+            android:layout_height="300dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:src="@drawable/zone_preview" />
+
+        <TextView
+            android:id="@+id/zone_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image_preview"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="Test"
+            android:textAlignment="gravity"
+            android:textColor="@color/black"
+            android:textSize="17dp" />
+
+        <View
+            android:layout_width="300dp"
+            android:layout_height="3dp"
+            android:layout_below="@id/detail_preview"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:background="@color/black" />
+
+
+    </RelativeLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="320dp"
+        android:layout_marginTop="700dp"
+        android:src="@drawable/ic_baseline_qr_code_scanner_24"
+        app:fabSize="normal"
+        android:backgroundTint="@color/museum"
+        android:id="@+id/qr_code"/>
+</RelativeLayout>

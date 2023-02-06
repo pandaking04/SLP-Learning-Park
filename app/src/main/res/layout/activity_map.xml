@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity_map"
+    android:background="@drawable/foreground"
+    android:backgroundTint="#E9FFFFFF"
+    android:backgroundTintMode="src_over">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/museum"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="อุทยานการเรียนรู้มทส."
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:layout_centerInParent="true"/>
+
+
+
+        </RelativeLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <TextView
+        android:id="@+id/text_label"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="โปรดเลือกอาคารที่สนใจ"
+        android:textSize="25dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="160dp"
+        android:layout_centerHorizontal="true"/>
+
+
+    <GridLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:rowCount="2"
+        android:columnCount="2">
+
+        <ImageButton android:layout_width="200dp"
+            android:id="@+id/plant_btn"
+            android:layout_height="150dp"
+            android:src="@drawable/plant_new"
+            android:scaleType="fitCenter"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:background="#00000000"
+            android:layout_margin="10sp"
+            android:layout_marginTop="50dp"
+            />
+
+        <ImageButton android:layout_width="200dp"
+            android:id="@+id/butterfly_btn"
+            android:layout_height="150dp"
+            android:src="@drawable/butterfly_new"
+            android:scaleType="fitCenter"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:background="#00000000"
+            android:layout_margin="10sp"
+            android:layout_marginTop="50dp"/>
+
+        <ImageButton android:layout_width="200dp"
+            android:id="@+id/art_btn"
+            android:layout_height="150dp"
+            android:src="@drawable/art_new"
+            android:scaleType="fitCenter"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:background="#00000000"
+            android:layout_marginLeft="10sp"/>
+
+        <ImageButton android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:src="@drawable/ancinet_new"
+            android:scaleType="fitCenter"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:background="#00000000"
+            android:layout_marginLeft="10sp"
+            android:id="@+id/ancient_btn"
+            />
+
+
+
+    </GridLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_navigation"
+        app:itemBackground="@color/museum"
+        app:itemTextColor="@drawable/selector"
+        app:itemIconTint="@drawable/selector"
+        app:menu="@menu/bottom_nav_menu"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SLP_Template"
+
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/foreground"
+        android:backgroundTint="#E9FFFFFF"
+        android:backgroundTintMode="src_over">
+
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/museum"
+                    android:minHeight="?attr/actionBarSize"
+                    android:theme="?attr/actionBarTheme" />
+
+                <ImageButton
+                    android:id="@+id/back_btn"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/museum"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/new_back" />
+
+                <TextView
+                    android:id="@+id/map_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Text"
+                    android:textColor="@color/white"
+                    android:textSize="25dp" />
+
+
+            </RelativeLayout>
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ImageView
+            android:id="@+id/image_preview"
+            android:layout_marginTop="100dp"
+            android:layout_width="380dp"
+            android:layout_height="300dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/cover1" />
+
+        <TextView
+            android:id="@+id/detail_preview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Test"
+            android:layout_below="@+id/image_preview"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:textSize="17dp"
+            android:textAlignment="gravity"
+            android:textColor="@color/black"/>
+
+        <View
+            android:layout_marginTop="40dp"
+            android:layout_width="300dp"
+            android:layout_centerHorizontal="true"
+            android:layout_height="3dp"
+            android:background="@color/black"
+            android:layout_below="@id/detail_preview"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_below="@+id/detail_preview">
+
+            <Button
+                android:id="@+id/review_btn"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="100dp"
+                android:text="Review"
+                android:backgroundTint="@color/museum"
+                />
+
+            <Button
+                android:id="@+id/start_btn"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:text="Start"
+                android:backgroundTint="@color/museum"/>
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

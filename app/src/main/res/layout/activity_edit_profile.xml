@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Profile"
+    android:id="@+id/drawer_layout"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/museum"
+                    android:minHeight="?attr/actionBarSize"
+                    android:theme="?attr/actionBarTheme" />
+
+                <ImageButton
+                    android:id="@+id/back_btn"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/museum"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/new_back" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="แก้ไขโปรไฟล์"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:layout_centerInParent="true"/>
+
+                <ImageButton
+                    android:id="@+id/setting"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="285dp"
+                    android:background="@color/museum"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_setting" />
+
+            </RelativeLayout>
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <ImageView
+            android:id="@+id/profile_image_edit"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/edit_profile" />
+
+
+        <TextView
+            android:id="@+id/edit_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:layout_below="@+id/profile_image_edit"
+            android:layout_centerHorizontal="true"
+            android:text="เปลี่ยนรูปโปรไฟล์"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+             />
+
+        <EditText
+            android:id="@+id/edit_username"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/edit_label"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/custom_input"
+            android:hint="    ชื่อผู้ใช้" />
+
+        <EditText
+            android:id="@+id/edit_email"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/edit_username"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/custom_input"
+            android:hint="    อีเมล" />
+
+        <Button
+            android:id="@+id/confirm_edit"
+            android:layout_width="300dp"
+            android:layout_height="65dp"
+            android:layout_centerHorizontal="true"
+            android:text="ยืนยัน"
+            android:textSize="20dp"
+            android:backgroundTint="@color/museum"
+            android:layout_below="@id/edit_email"/>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Ancient"
+    android:background="@drawable/background4">
+
+    <ImageButton
+        android:id="@+id/arrow_back"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+
+        android:background="@color/back_bg"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_baseline_arrow_back_24" />
+
+    <ImageView
+        android:id="@+id/cover1"
+        android:layout_width="350dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="457dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/cover1"
+        />
+
+    <TextView
+        android:id="@+id/ancient_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cover1"
+        android:text="@string/ancient_des"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:layout_below="@+id/ancient_txt">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="100dp"
+            android:text="Review"
+            android:backgroundTint="@color/bg_edittext"
+            />
+
+        <Button
+            android:id="@+id/start_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start"
+            android:backgroundTint="@color/bg_edittext"/>
+    </LinearLayout>
+</RelativeLayout>

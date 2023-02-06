@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "456690625281",
+    "firebase_url": "https://museum4life-4f516-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "museum4life-4f516",
+    "storage_bucket": "museum4life-4f516.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:456690625281:android:eaf2008f8cb4ea4fa0c900",
+        "android_client_info": {
+          "package_name": "com.example.museum4life"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "456690625281-ejof2ktpsv3g7fg87hc98av5e0trn41o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.museum4life",
+            "certificate_hash": "241be5e9705bc84ec5871ef5fb039c56d214f137"
+          }
+        },
+        {
+          "client_id": "456690625281-8r7ikc9ssefami32lq41qpubvsos0ulu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxuWkWTp2OAL7lY6KxZU_81Uzj4JThDZk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "456690625281-8r7ikc9ssefami32lq41qpubvsos0ulu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

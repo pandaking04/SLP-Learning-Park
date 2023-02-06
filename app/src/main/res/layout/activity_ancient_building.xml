@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ancient_building"
+    android:background="@color/museum"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/squre_bg1">
+
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/museum"
+                    android:minHeight="?attr/actionBarSize"
+                    android:theme="?attr/actionBarTheme" />
+
+                <ImageButton
+                    android:id="@+id/back_btn"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/museum"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/new_back" />
+
+
+
+
+            </RelativeLayout>
+
+
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textSize="20dp"
+            android:text="แผนที่โซน"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="95dp"/>
+
+
+
+        <ImageButton
+            android:layout_marginTop="500dp"
+            android:layout_marginLeft="270dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Map"
+            android:src="@drawable/ancient_zone1"
+            android:background="@color/white"
+            android:id="@+id/ancient_zone1_btn"/>
+
+        <ImageButton
+            android:id="@+id/ancient_zone2_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="340dp"
+            android:background="@color/white"
+            android:src="@drawable/ancient_zone2"
+            android:layout_marginLeft="280dp"
+            android:text="Map" />
+
+        <ImageButton
+            android:id="@+id/ancient_zone3_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="180dp"
+            android:background="@color/white"
+            android:src="@drawable/ancinet_zone3"
+            android:layout_marginLeft="280dp"
+            android:text="Map" />
+
+        <ImageButton
+            android:id="@+id/ancient_zone4_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="180dp"
+            android:background="@color/white"
+            android:src="@drawable/ancient_zone4"
+            android:layout_marginLeft="120dp"
+            />
+
+        <ImageButton
+            android:id="@+id/ancient_zone5_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="235dp"
+            android:background="@color/white"
+            android:src="@drawable/ancinet_zone5"
+            android:layout_marginLeft="30dp"
+            />
+
+        <ImageButton
+            android:id="@+id/ancient_zone6_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="400dp"
+            android:background="@color/white"
+            android:src="@drawable/ancient_zone6"
+            android:layout_marginLeft="30dp"
+            />
+
+        <ImageButton
+            android:id="@+id/ancient_zone7_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="310dp"
+            android:background="@color/white"
+            android:src="@drawable/ancinet_zone7"
+            android:layout_marginLeft="150dp"
+            />
+    </RelativeLayout>
+
+
+</RelativeLayout>

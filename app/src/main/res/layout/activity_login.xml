@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:background="@drawable/background_purple">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/foreground_white">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/new_logo"/>
+
+
+
+    <EditText
+        android:id="@+id/login_email"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="370dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/custom_input"
+        android:layout_centerHorizontal="true"
+        android:hint="   อีเมล"
+        android:textColor="@color/black" />
+
+    <EditText
+        android:id="@+id/login_password"
+        android:hint="   รหัสผ่าน"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@+id/login_email"
+        android:background="@drawable/custom_input"
+        android:layout_centerHorizontal="true"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:inputType="textPassword"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="ลืมรหัสผ่าน"
+        android:textColor="@color/black"
+        android:layout_marginTop="520dp"
+        android:id="@+id/forget_password"
+        android:layout_marginLeft="335dp"/>
+
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="250dp"
+        android:layout_height="55dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/login_password"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/museum"
+        android:text="เข้าสู่ระบบ" />
+
+<!--    <ImageView-->
+<!--        android:layout_width="60dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginLeft="115dp"-->
+<!--        android:layout_marginTop="570dp"-->
+<!--        android:scaleType="fitCenter"-->
+<!--        android:src="@drawable/fb" />-->
+
+<!--    <ImageView-->
+<!--        android:layout_width="60dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:scaleType="fitCenter"-->
+<!--        android:layout_marginTop="565dp"-->
+<!--        android:layout_marginLeft="210dp"-->
+<!--        android:src="@drawable/google"-->
+<!--        />-->
+
+
+    <Button
+        android:id="@+id/register_button"
+        android:layout_width="250dp"
+        android:layout_height="55dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/login"
+        android:backgroundTint="@color/museum"
+        android:text="สมัครสมาชิก" />
+
+        <Button
+            android:id="@+id/test_ar"
+            android:layout_width="250dp"
+            android:layout_height="55dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/register_button"
+            android:backgroundTint="@color/museum"
+            android:text="test" />
+
+
+    </RelativeLayout>
+</RelativeLayout>
