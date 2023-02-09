@@ -33,6 +33,7 @@ public class ancient_building extends AppCompatActivity {
                 intent.putExtra("zone_des","จัดแสดงในส่วนของการทำนาในสมัยโบราณ มีอุปกรณ์ต่างๆที่ใช้คือคันไถคราดและอีทุบโดยคันไถจะใช้ในขั้นตอนแรกเพื่อขุดดินจากดินเรียบๆคราดใช้ปรับหน้าดินให้เท่ากันเพื่อพร้อมที่จะปลูกข้าวอีทุบใช้ทำให้ดินก้อนใหญ่ๆกลายเป็นดินก้อนเล็กๆ");
                 intent.putExtra("ar_check", "withAR");
                 intent.putExtra("zoneNo", "zone1");
+                intent.putExtra("building", "ancient");
                 startActivity(intent);
             }
         });

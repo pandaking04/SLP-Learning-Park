@@ -66,6 +66,11 @@ public class SLP_Template extends AppCompatActivity {
                     startActivity(new Intent(SLP_Template.this, ancient_building.class));
                 }else if(map_name.equals("สวนพฤกษศาสตร์")){
                     startActivity(new Intent(SLP_Template.this, plant_building.class));
+                }else if(map_name.equals("ไทยศึกษานิทัศน์")){
+                    startActivity(new Intent(SLP_Template.this, art_building.class));
+                }
+                else if(map_name.equals("อุทยานผีเสื้อ")){
+                    startActivity(new Intent(SLP_Template.this, butterfly_building.class));
                 }
 
             }

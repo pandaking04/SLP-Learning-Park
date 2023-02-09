@@ -97,16 +97,22 @@
 
 
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    <Button
+        android:layout_centerHorizontal="true"
         android:id="@+id/showAR"
-        android:layout_width="wrap_content"
+        android:layout_width="500dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="350dp"
-        android:layout_marginTop="770dp"
-        android:src="@drawable/ic_baseline_qr_code_scanner_24"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="700dp"
+        android:layout_gravity="end"
+        android:drawableRight="@drawable/ic_ar"
         app:fabSize="normal"
-        android:backgroundTint="@color/white"
+        android:text="SEE AR"
+        android:backgroundTint="@color/museum"
         />
+
+
+
 
 
 

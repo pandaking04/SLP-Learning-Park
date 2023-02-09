@@ -119,6 +119,9 @@ public class QRCodeScanner extends AppCompatActivity implements ZXingScannerView
     }
     @Override
     public void handleResult(Result result) {
+        Intent intent = getIntent();
+        Bundle extras = intent.getExtras();
+        String building = extras.getString("building");
         final String rawResult = result.getText();
         AlertDialog.Builder builder = new AlertDialog.Builder(this);;
         builder.setTitle("Scan Result");
@@ -129,6 +132,7 @@ public class QRCodeScanner extends AppCompatActivity implements ZXingScannerView
 
                     Intent intent = new Intent(QRCodeScanner.this, info_with_ar.class);
                     intent.putExtra("name", result.getText());
+                    intent.putExtra("building", building);
                     startActivity(intent);
 
 

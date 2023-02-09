@@ -59,91 +59,91 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/emojione_bug"
+            android:src="@drawable/khan"
             android:layout_marginTop="70dp"
             android:layout_marginLeft="270dp"/>
 
 
         <ImageButton
-            android:id="@+id/butterfly_zone1"
+            android:id="@+id/art_zone1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="160dp"
             android:layout_marginTop="500dp"
             android:background="@color/white"
-            android:src="@drawable/butterfly_zone1"
+            android:src="@drawable/art_btn_1"
             android:text="Map" />
 
         <ImageButton
-            android:id="@+id/butterfly_zone2"
+            android:id="@+id/art_zone2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="160dp"
-            android:layout_marginTop="260dp"
+            android:layout_marginTop="430dp"
             android:background="@color/white"
-            android:src="@drawable/butterfly_zone2" />
-
-
+            android:src="@drawable/art_btn_2" />
 
         <ImageButton
-            android:id="@+id/butterfly_zone3"
+            android:id="@+id/art_zone3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="160dp"
+            android:layout_marginTop="350dp"
+            android:background="@color/white"
+            android:src="@drawable/art_btn_3" />
+
+        <ImageButton
+            android:id="@+id/art_zone4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="350dp"
             android:layout_marginTop="300dp"
             android:background="@color/white"
-            android:src="@drawable/butterfly_zone3"
+            android:src="@drawable/art_btn_4"
             android:text="Map" />
 
         <ImageButton
-            android:id="@+id/butterfly_zone7"
+            android:id="@+id/art_zone5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="160dp"
-            android:layout_marginTop="320dp"
+            android:layout_marginTop="250dp"
             android:background="@color/white"
-            android:src="@drawable/butterfly_zone7" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="150dp"
-            android:src="@drawable/butterfly_icon" />
+            android:src="@drawable/art_btn_5" />
 
         <ImageButton
-            android:id="@+id/butterfly_zone4"
+            android:id="@+id/art_zone6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="160dp"
-            android:layout_marginTop="160dp"
+            android:layout_marginTop="180dp"
             android:background="@color/white"
-            android:src="@drawable/butterfly_zone4" />
+            android:src="@drawable/art_btn_6" />
 
         <ImageButton
-            android:id="@+id/butterfly_zone5"
+            android:id="@+id/art_zone7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="60dp"
-            android:layout_marginTop="240dp"
+            android:layout_marginTop="200dp"
             android:background="@color/white"
-            android:src="@drawable/butterfly_zone5" />
+            android:src="@drawable/art_btn_7" />
 
         <ImageButton
-            android:id="@+id/butterfly_zone6"
+            android:id="@+id/art_zone8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="60dp"
             android:layout_marginTop="370dp"
             android:background="@color/white"
-            android:src="@drawable/butterfly_zone6" />
+            android:src="@drawable/art_btn_8" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="330dp"
-            android:layout_marginTop="500dp"
-            android:src="@drawable/leaf" />
+            android:layout_marginTop="530dp"
+            android:src="@drawable/vase" />
 
 
 

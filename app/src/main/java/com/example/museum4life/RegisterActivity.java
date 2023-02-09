@@ -131,6 +131,7 @@ public class RegisterActivity extends AppCompatActivity {
                        documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                            @Override
                            public void onSuccess(Void unused) {
+
                                Log.d(TAG,"onSuccess: " + uid);
                            }
                        });

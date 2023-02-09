@@ -36,6 +36,7 @@ public class plant_building extends AppCompatActivity {
                 intent.putExtra("zone_name","โซนต้นไม้ประจำราชการ");
                 intent.putExtra("zone_des"," ต้นราชพฤกษ์/ต้นคูน เป็นต้นไม้มงคลนิยมใช้ประกอบพิธีที่สำคัญ เช่น พิธีเสาไม้หลักเมือง เป็นส่วนประกอบในการท าคฑาจอมพล และ ยอดธงชัยเฉลิมพลของกองทหาร ทำพิธีปลูกบ้าน ฯลฯ ต้นราชพฤกษ์นอกจากจะเป็นไม้ประจำรัชกาลที่ 9 แล้วยังเป็นต้นไม้ประจำจังหวัดขอนแก่นอีกด้วย");
                 intent.putExtra("ar_Check", "noAR");
+                intent.putExtra("building", "plant");
                 startActivity(intent);
 
             }

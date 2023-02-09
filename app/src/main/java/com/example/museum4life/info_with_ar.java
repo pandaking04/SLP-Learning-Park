@@ -39,7 +39,7 @@ public class info_with_ar extends AppCompatActivity {
     ImageButton back_btn,audio_btn;
     TextView things_name,things_description;
     String audio_sauce;
-    FloatingActionButton showAR;
+    Button showAR;
     String img_sauce = "test";
     TextToSpeech t1;
 
@@ -53,9 +53,12 @@ public class info_with_ar extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info_with_ar);
 
+        //extras
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
         String thingName = extras.getString("name");
+        String building = extras.getString("building");
+        //
 
         fStore = FirebaseFirestore.getInstance();
 
@@ -85,7 +88,7 @@ public class info_with_ar extends AppCompatActivity {
             }
         });
 
-        DocumentReference documentReference = fStore.collection("museum").document("ancient").collection("Things")
+        DocumentReference documentReference = fStore.collection("museum").document(building).collection("Things")
                 .document(thingName);
 
         documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {

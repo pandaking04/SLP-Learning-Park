@@ -1,5 +1,6 @@
 package com.example.museum4life;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,15 +8,29 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
+
 public class finish extends AppCompatActivity {
 
     Button comment_btn,home_btn,retry_btn;
     private String myComment;
+    private FirebaseAuth mAuth;
+    private FirebaseFirestore fireStore;
+    private String uid, usernameTxt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +40,18 @@ public class finish extends AppCompatActivity {
         comment_btn = findViewById(R.id.comment_btn);
         home_btn = findViewById(R.id.home_btn);
         retry_btn = findViewById(R.id.again_btn);
+        mAuth = FirebaseAuth.getInstance();
+        fireStore = FirebaseFirestore.getInstance();
+        uid = mAuth.getCurrentUser().getUid();
+
+        fireStore.collection("Users").document(uid).get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                String username = documentSnapshot.getString("username");
+
+                usernameTxt = username;
+            }
+        });
 
         home_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,7 +76,26 @@ public class finish extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         myComment = commentInput.getText().toString();
-                        Toast.makeText(finish.this, "Commemt Added", Toast.LENGTH_LONG).show();
+                        Map<String, Object> comment = new HashMap<>();
+                        comment.put("text", myComment);
+                        comment.put("username", usernameTxt);
+
+                       DocumentReference db = fireStore.collection("museum").document("ancient")
+                               .collection("Comment")
+                                .document();
+                       db.set(comment).addOnSuccessListener(new OnSuccessListener<Void>() {
+                           @Override
+                           public void onSuccess(Void unused) {
+                               Log.d("comment","DocumentSnapshot written with ID: " + db.getId());
+                               Toast.makeText(finish.this, "Comment Added", Toast.LENGTH_LONG).show();
+                           }
+                       }).addOnFailureListener(new OnFailureListener() {
+                           @Override
+                           public void onFailure(@NonNull Exception e) {
+                               Log.w("comment", "Error adding document", e);
+                           }
+                       });
+
                     }
                 });
 

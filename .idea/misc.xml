@@ -34,13 +34,14 @@
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Museum4Life/app/src/main/res/layout/activity_ancient_zone1.xml" value="0.25271739130434784" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Museum4Life/app/src/main/res/layout/activity_ancient_zone6.xml" value="0.1" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Museum4Life/app/src/main/res/layout/activity_ar.xml" value="0.152" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Museum4Life/app/src/main/res/layout/activity_art_building.xml" value="0.536" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Museum4Life/app/src/main/res/layout/activity_butteyfly_building.xml" value="0.2259963768115942" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Museum4Life/app/src/main/res/layout/activity_credit.xml" value="0.264" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Museum4Life/app/src/main/res/layout/activity_edit_profile.xml" value="0.176" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Museum4Life/app/src/main/res/layout/activity_finish.xml" value="0.22592592592592592" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Museum4Life/app/src/main/res/layout/activity_forget.xml" value="0.24003623188405798" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Museum4Life/app/src/main/res/layout/activity_info.xml" value="0.16799999999999998" />
-        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Museum4Life/app/src/main/res/layout/activity_info_with_ar.xml" value="0.136" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Museum4Life/app/src/main/res/layout/activity_info_with_ar.xml" value="0.176" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Museum4Life/app/src/main/res/layout/activity_loading.xml" value="0.25271739130434784" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Museum4Life/app/src/main/res/layout/activity_login.xml" value="0.2" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Museum4Life/app/src/main/res/layout/activity_main.xml" value="0.264" />
@@ -54,6 +55,7 @@
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Museum4Life/app/src/main/res/layout/activity_review.xml" value="0.23097826086956522" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Museum4Life/app/src/main/res/layout/activity_slp_template.xml" value="0.264" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Museum4Life/app/src/main/res/layout/activity_temp_acitivity.xml" value="0.24003623188405798" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Museum4Life/app/src/main/res/layout/comment_view.xml" value="0.22592592592592592" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Museum4Life/app/src/main/res/layout/fragment_home.xml" value="0.1598731884057971" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Museum4Life/app/src/main/res/layout/fragment_profile.xml" value="0.264" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Museum4Life/app/src/main/res/layout/item.xml" value="0.264" />

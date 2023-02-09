@@ -8,51 +8,54 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Review_Adapter extends RecyclerView.Adapter<Review_Adapter.ViewHolder> {
 
     private LayoutInflater layoutInflater;
-    private List<String> data;
+    private ArrayList<Comment> commentArrayList;
+    Context context;
 
-    Review_Adapter(Context context, List<String> data){
-        this.layoutInflater = LayoutInflater.from(context);
-        this.data = data;
+    Review_Adapter(Context context, ArrayList<Comment> data){
+        this.context = context;
+        this.commentArrayList = data;
     }
 
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = layoutInflater.inflate(R.layout.review_card,parent,false);
-        return new ViewHolder(view);
+    public Review_Adapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View v = LayoutInflater.from(context).inflate(R.layout.comment_view,parent,false);
+        return new ViewHolder(v);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        String name = data.get(position);
-        holder.userName.setText(name);
-
-        String comment = data.get(position);
-        holder.userComment.setText(comment);
+       Comment comment = commentArrayList.get(position);
+       holder.userName.setText(comment.username);
+       holder.userComment.setText(comment.text);
 
     }
 
     @Override
     public int getItemCount() {
-        return data.size();
+        return commentArrayList.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
 
         TextView userName,userComment;
+        CardView cardView;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            userName = itemView.findViewById(R.id.username_text);
-            userComment = itemView.findViewById(R.id.user_comment);
+            userName = itemView.findViewById(R.id.user_txt);
+            userComment = itemView.findViewById(R.id.comment_txt);
+            cardView = itemView.findViewById(R.id.myComment);
 
         }
     }

@@ -24,6 +24,7 @@ public class map_info extends AppCompatActivity {
         String zone_name = extras.getString("zone_name");
         String check_AR = extras.getString("ar_check");
         String zone_No = extras.getString("zoneNo");
+        String building = extras.getString("building");
 
         zone_txt = findViewById(R.id.zone_name);
         zone_txt_des = findViewById(R.id.zone_des);
@@ -39,6 +40,7 @@ public class map_info extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(map_info.this,QRCodeScanner.class);
                 intent.putExtra("checkAR", check_AR);
+                intent.putExtra("building", building);
                 startActivity(intent);
 
             }

@@ -27,6 +27,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Museum4Life">
         <activity
+            android:name=".art_building"
+            android:exported="false" />
+        <activity
             android:name=".finish"
             android:exported="false" />
         <activity

@@ -56,11 +56,11 @@ dependencies {
     implementation 'com.google.zxing:core:3.2.1'
     implementation 'com.journeyapps:zxing-android-embedded:3.2.0@aar'
     implementation 'me.dm7.barcodescanner:zxing:1.9'
-    implementation 'com.android.support:design:28.0.0'
     implementation 'com.google.ar.sceneform.ux:sceneform-ux:1.15.0'
     implementation 'com.google.ar.sceneform:assets:1.15.0'
     implementation 'com.google.ar.sceneform:core:1.15.0'
     implementation 'com.google.ar:core:1.15.0'
+    implementation 'com.android.support:design:28.0.0'
 }
 
 apply plugin: 'com.google.gms.google-services'
