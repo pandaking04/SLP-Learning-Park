@@ -42,6 +42,7 @@ public class activity_map extends AppCompatActivity {
                 intent.putExtra("detail", ancient_detail);
                 intent.putExtra("name", ancient_name);
                 intent.putExtra("image", R.drawable.ancient_cover);
+                intent.putExtra("building", "ancient");
                 startActivity(intent);
             }
         });
@@ -53,6 +54,7 @@ public class activity_map extends AppCompatActivity {
                 intent.putExtra("detail", art_detail);
                 intent.putExtra("name", art_name);
                 intent.putExtra("image", R.drawable.art_cover);
+                intent.putExtra("building", "art");
                 startActivity(intent);
             }
         });
@@ -64,6 +66,7 @@ public class activity_map extends AppCompatActivity {
                 intent.putExtra("detail", plant_detail);
                 intent.putExtra("name", plant_name);
                 intent.putExtra("image", R.drawable.plant_cover);
+                intent.putExtra("building", "plant");
                 startActivity(intent);
             }
         });
@@ -75,6 +78,7 @@ public class activity_map extends AppCompatActivity {
                 intent.putExtra("detail", butter_detail);
                 intent.putExtra("name", butter_name);
                 intent.putExtra("image", R.drawable.butterfly_cover);
+                intent.putExtra("building", "butterfly");
                 startActivity(intent);
             }
         });

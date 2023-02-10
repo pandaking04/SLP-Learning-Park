@@ -6,8 +6,13 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentChange;
@@ -26,6 +31,9 @@ public class Review extends AppCompatActivity {
     ArrayList<Comment> commentArrayList;
     FirebaseFirestore db;
     ProgressDialog progressDialog;
+    TextView review_label;
+    ImageButton back_btn;
+    ImageView previewImg;
 
 
     @Override
@@ -33,14 +41,38 @@ public class Review extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_review);
 
-        progressDialog = new ProgressDialog(this);
+        Intent intent = getIntent();
+        Bundle extras = intent.getExtras();
+        String building = extras.getString("building");
+        String building_name = extras.getString("name");
+        String map_detail = extras.getString("detail");
+        int image_link = getIntent().getIntExtra("image", 0);
+
+       /* progressDialog = new ProgressDialog(this);
         progressDialog.setCancelable(false);
         progressDialog.setMessage("Fetching Data..");
-        progressDialog.show();
+        progressDialog.show(); */
 
 
+        back_btn = findViewById(R.id.back_btn);
+        previewImg = findViewById(R.id.image_preview);
 
+        previewImg.setImageResource(image_link);
 
+        back_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Review.this, SLP_Template.class);
+                intent.putExtra("name", building_name);
+                intent.putExtra("detail", map_detail);
+                intent.putExtra("image", image_link);
+                intent.putExtra("building", building);
+                startActivity(intent);
+
+            }
+        });
+
+        review_label = findViewById(R.id.review_txt);
         recyclerView = findViewById(R.id.recycleView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -50,17 +82,19 @@ public class Review extends AppCompatActivity {
 
         recyclerView.setAdapter(adapter);
 
-        EventChangeListener();
+        review_label.setText(building_name);
+
+        EventChangeListener(building);
     }
 
-    private void EventChangeListener() {
-        db.collection("museum").document("ancient").collection("Comment")
+    private void EventChangeListener(String building) {
+        db.collection("museum").document(building).collection("Comment")
                 .addSnapshotListener(new EventListener<QuerySnapshot>() {
                     @Override
                     public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
                         if(error != null){
-                            if(progressDialog.isShowing())
-                                progressDialog.dismiss();
+                           /* if(progressDialog.isShowing())
+                                progressDialog.dismiss(); */
                             Log.e("Firestore error",error.getMessage());
                             return;
                         }
@@ -71,8 +105,8 @@ public class Review extends AppCompatActivity {
                             }
 
                             adapter.notifyDataSetChanged();
-                            if(progressDialog.isShowing())
-                                progressDialog.dismiss();
+                           /* if(progressDialog.isShowing())
+                                progressDialog.dismiss(); */
                         }
                     }
                 });

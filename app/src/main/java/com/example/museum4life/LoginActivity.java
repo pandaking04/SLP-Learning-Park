@@ -19,7 +19,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class LoginActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private EditText email, password;
-    private Button btnLogin,btnRegister,testAr;
+    private Button btnLogin,btnRegister;
     private TextView forgetPassword;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,15 +32,9 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin = findViewById(R.id.login);
         btnRegister = findViewById(R.id.register_button);
         forgetPassword = findViewById(R.id.forget_password);
-        testAr = findViewById(R.id.test_ar);
 
-        testAr.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this,model_ar.class);
-                startActivity(intent);
-            }
-        });
+
+
 
         forgetPassword.setOnClickListener(new View.OnClickListener() {
             @Override

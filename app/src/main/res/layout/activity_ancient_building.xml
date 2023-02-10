@@ -61,25 +61,24 @@
             android:layout_marginTop="95dp"/>
 
 
-
         <ImageButton
-            android:layout_marginTop="500dp"
-            android:layout_marginLeft="270dp"
+            android:id="@+id/ancient_zone1_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Map"
-            android:src="@drawable/ancient_zone1"
+            android:layout_marginLeft="270dp"
+            android:layout_marginTop="500dp"
             android:background="@color/white"
-            android:id="@+id/ancient_zone1_btn"/>
+            android:src="@drawable/ancient_zone1"
+            android:text="Map" />
 
         <ImageButton
             android:id="@+id/ancient_zone2_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="280dp"
             android:layout_marginTop="340dp"
             android:background="@color/white"
             android:src="@drawable/ancient_zone2"
-            android:layout_marginLeft="280dp"
             android:text="Map" />
 
         <ImageButton

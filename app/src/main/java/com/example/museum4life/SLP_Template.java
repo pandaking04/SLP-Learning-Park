@@ -28,6 +28,7 @@ public class SLP_Template extends AppCompatActivity {
         Bundle extras = intent.getExtras();
         String map_detail = extras.getString("detail");
         String map_name = extras.getString("name");
+        String building = extras.getString("building");
 
         backBtn = findViewById(R.id.back_btn);
         previewImg = findViewById(R.id.image_preview);
@@ -54,7 +55,12 @@ public class SLP_Template extends AppCompatActivity {
         reviewBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(SLP_Template.this, Review.class));
+                Intent intent = new Intent(SLP_Template.this, Review.class);
+                intent.putExtra("building",building);
+                intent.putExtra("name", map_name);
+                intent.putExtra("detail", map_detail);
+                intent.putExtra("image", image_link);
+                startActivity(intent);
             }
         });
 

@@ -11,8 +11,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@drawable/squre_bg1">
+        android:background="@drawable/squre_bg1"
+        android:orientation="vertical">
 
 
         <com.google.android.material.appbar.AppBarLayout
@@ -41,11 +41,7 @@
                     android:src="@drawable/new_back" />
 
 
-
-
             </RelativeLayout>
-
-
 
 
         </com.google.android.material.appbar.AppBarLayout>
@@ -54,41 +50,40 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:textSize="20dp"
+            android:layout_marginTop="95dp"
             android:text="แผนที่โซน"
-            android:textStyle="bold"
             android:textColor="@color/black"
-            android:layout_marginTop="95dp"/>
-
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
 
         <ImageButton
-            android:layout_marginTop="500dp"
+            android:id="@+id/zone1_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Map"
-            android:src="@drawable/zone1_btn"
+            android:layout_marginTop="500dp"
             android:background="@color/white"
-            android:id="@+id/zone_btn"/>
+            android:src="@drawable/zone1_btn"
+            android:text="Map" />
 
         <ImageButton
             android:id="@+id/zone2_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="280dp"
             android:layout_marginTop="340dp"
             android:background="@color/white"
             android:src="@drawable/zone2_btn"
-            android:layout_marginLeft="280dp"
             android:text="Map" />
 
         <ImageButton
             android:id="@+id/zone3_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="280dp"
             android:layout_marginTop="180dp"
             android:background="@color/white"
             android:src="@drawable/zone3_btn"
-            android:layout_marginLeft="280dp"
             android:text="Map" />
     </RelativeLayout>
 

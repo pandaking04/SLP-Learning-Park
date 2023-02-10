@@ -37,6 +37,10 @@ public class finish extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_finish);
 
+        Intent intent = getIntent();
+        Bundle extras = intent.getExtras();
+        String building = extras.getString("building");
+
         comment_btn = findViewById(R.id.comment_btn);
         home_btn = findViewById(R.id.home_btn);
         retry_btn = findViewById(R.id.again_btn);
@@ -80,7 +84,7 @@ public class finish extends AppCompatActivity {
                         comment.put("text", myComment);
                         comment.put("username", usernameTxt);
 
-                       DocumentReference db = fireStore.collection("museum").document("ancient")
+                       DocumentReference db = fireStore.collection("museum").document(building)
                                .collection("Comment")
                                 .document();
                        db.set(comment).addOnSuccessListener(new OnSuccessListener<Void>() {

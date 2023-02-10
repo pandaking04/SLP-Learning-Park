@@ -40,7 +40,7 @@
                     android:src="@drawable/new_back" />
 
                 <TextView
-                    android:id="@+id/textView"
+                    android:id="@+id/review_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="text"
@@ -63,12 +63,12 @@
             android:background="@color/black"
             />
 
-    <ImageView
-        android:id="@+id/image_preview"
-        android:layout_width="340dp"
-        android:layout_height="350dp"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/ancient_cover"/>
+        <ImageView
+            android:id="@+id/image_preview"
+            android:layout_width="340dp"
+            android:layout_height="350dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ancient_cover" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycleView"

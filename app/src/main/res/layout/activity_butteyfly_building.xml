@@ -75,7 +75,7 @@
             android:text="Map" />
 
         <ImageButton
-            android:id="@+id/butterfly_zone2"
+            android:id="@+id/butterfly_zone3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="160dp"
@@ -84,9 +84,8 @@
             android:src="@drawable/butterfly_zone2" />
 
 
-
         <ImageButton
-            android:id="@+id/butterfly_zone3"
+            android:id="@+id/butterfly_zone2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="350dp"
