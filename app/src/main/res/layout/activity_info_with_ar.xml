@@ -76,13 +76,13 @@
         android:textStyle="bold"/>
 
     <ImageView
-        android:layout_marginBottom="15dp"
         android:id="@+id/things_img"
         android:layout_width="300dp"
         android:layout_height="200dp"
         android:layout_below="@+id/things_name"
-        android:src="@drawable/butterfly_preview"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+         />
 
     <TextView
         android:id="@+id/things_des"
@@ -92,8 +92,10 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/things_img"
         android:textColor="@color/black"
-        android:textAlignment="textStart"
-        android:textSize="15dp"/>
+
+        android:textSize="20dp"
+        android:gravity="center"
+        android:layout_marginTop="13dp"/>
 
 
 

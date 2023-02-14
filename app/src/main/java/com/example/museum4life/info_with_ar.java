@@ -2,14 +2,17 @@ package com.example.museum4life;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -56,6 +59,9 @@ public class info_with_ar extends AppCompatActivity {
         //extras
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
+        String zone_detail = extras.getString("zone_des");
+        String zone_name = extras.getString("zone_name");
+        int image_link = getIntent().getIntExtra("image", 0);
         String thingName = extras.getString("name");
         String building = extras.getString("building");
         //
@@ -82,7 +88,11 @@ public class info_with_ar extends AppCompatActivity {
         back_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(info_with_ar.this,activity_map.class);
+                Intent intent = new Intent(info_with_ar.this,map_info.class);
+                intent.putExtra("zone_name", zone_name);
+                intent.putExtra("zone_des", zone_detail);
+                intent.putExtra("image", image_link);
+                intent.putExtra("building", building);
                 startActivity((intent));
                 finish();
             }
@@ -125,15 +135,32 @@ public class info_with_ar extends AppCompatActivity {
                 showAR.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(info_with_ar.this,model_ar.class);
-                        intent.putExtra("model", value.getString("name"));
-                        startActivity(intent);
+                        if(building.equals("ancient")){
+                            Intent intent = new Intent(info_with_ar.this,model_ar.class);
+                            intent.putExtra("model", value.getString("name"));
+                            startActivity(intent);
+                        }else{
+                            AlertDialog.Builder builder = new AlertDialog.Builder(info_with_ar.this);
+                            builder.setTitle("ขออภัย");
+                            builder.setPositiveButton("ตกลง", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                }
+                            });
+
+
+                            builder.setMessage("พื้นที่จัดแสดงนี้ี้ยังไม่มีบริการ AR");
+                            AlertDialog alertDialog = builder.create();
+                            alertDialog.show();
+                        }
+
                     }
                 });
 
                 audio_btn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        Log.d("sound", value.getString("description"));
                         t1.speak(value.getString("description"), TextToSpeech.QUEUE_FLUSH, null);
                     }
                 });

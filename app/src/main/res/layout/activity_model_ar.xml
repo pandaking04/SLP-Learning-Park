@@ -6,11 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".model_ar">
 
-    <fragment android:name="com.google.ar.sceneform.ux.ArFragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+    <ImageButton
+        android:id="@+id/back_btn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/museum"
+        android:scaleType="fitCenter"
+        android:src="@drawable/new_back" />
+
+    <fragment
         android:id="@+id/arFragment"
-        />
+        android:name="com.google.ar.sceneform.ux.ArFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
     <Button
         android:layout_width="wrap_content"
@@ -19,6 +28,8 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="24dp"
-        android:text="Show"/>
+        android:backgroundTint="@color/museum"
+        android:textSize="20dp"
+        android:text="แสดง"/>
 
 </RelativeLayout>

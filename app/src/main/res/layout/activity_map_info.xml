@@ -77,24 +77,16 @@
             android:textColor="@color/black"
             android:textSize="17dp" />
 
-        <View
-            android:layout_width="300dp"
-            android:layout_height="3dp"
-            android:layout_below="@id/detail_preview"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="40dp"
-            android:background="@color/black" />
-
 
     </RelativeLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="320dp"
+        android:id="@+id/qr_code"
+        android:layout_width="400dp"
+        android:layout_height="300dp"
+        android:layout_marginLeft="360dp"
         android:layout_marginTop="700dp"
-        android:src="@drawable/ic_baseline_qr_code_scanner_24"
-        app:fabSize="normal"
-        android:backgroundTint="@color/museum"
-        android:id="@+id/qr_code"/>
+        android:backgroundTint="@color/purple_200"
+        android:src="@drawable/ic_white_qr"
+        app:fabSize="normal" />
 </RelativeLayout>

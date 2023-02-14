@@ -1,7 +1,9 @@
 package com.example.museum4life;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -26,9 +28,26 @@ public class plant_building extends AppCompatActivity {
         back_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(plant_building.this,finish.class);
-                intent.putExtra("building", "plant");
-                startActivity(intent);
+                AlertDialog.Builder builder = new AlertDialog.Builder(plant_building.this);
+                builder.setTitle("คุณแน่ใจใช่ไหม");
+                builder.setPositiveButton("ใช่", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent intent = new Intent(plant_building.this,finish.class);
+                        intent.putExtra("building", "plant");
+                        startActivity(intent);
+                    }
+                });
+                builder.setNegativeButton("ไม่", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+                builder.setMessage("คุณต้องการสิ้นสุดการเยี่ยมชมใช่หรือไม่?");
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+
             }
         });
 

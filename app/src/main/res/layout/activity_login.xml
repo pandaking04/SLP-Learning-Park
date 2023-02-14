@@ -13,11 +13,11 @@
         android:background="@drawable/foreground_white">
 
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/new_logo"/>
+        <ImageView
+            android:layout_width="500dp"
+            android:layout_height="300dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/new_logo" />
 
 
 
@@ -26,15 +26,17 @@
         android:layout_width="350dp"
         android:layout_height="60dp"
         android:layout_marginTop="370dp"
+        android:padding="8dp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/custom_input"
         android:layout_centerHorizontal="true"
-        android:hint="   อีเมล"
+        android:hint="อีเมล"
         android:textColor="@color/black" />
 
     <EditText
         android:id="@+id/login_password"
-        android:hint="   รหัสผ่าน"
+        android:hint="รหัสผ่าน"
+        android:padding="8dp"
         android:layout_marginBottom="20dp"
         android:layout_below="@+id/login_email"
         android:background="@drawable/custom_input"
@@ -63,7 +65,8 @@
         android:layout_marginTop="50dp"
         android:layout_marginBottom="20dp"
         android:backgroundTint="@color/museum"
-        android:text="เข้าสู่ระบบ" />
+        android:text="เข้าสู่ระบบ"
+        android:textSize="17dp"/>
 
 <!--    <ImageView-->
 <!--        android:layout_width="60dp"-->
@@ -90,7 +93,8 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/login"
         android:backgroundTint="@color/museum"
-        android:text="สมัครสมาชิก" />
+        android:text="สมัครสมาชิก"
+        android:textSize="17dp"/>
 
 
 

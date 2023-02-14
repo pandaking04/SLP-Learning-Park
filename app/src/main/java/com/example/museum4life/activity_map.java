@@ -94,6 +94,7 @@ public class activity_map extends AppCompatActivity {
                     case R.id.profile:
                         startActivity(new Intent(getApplicationContext(),Profile.class));
                         overridePendingTransition(0,0);
+                        finish();
                         return true;
 
                     case R.id.map:
@@ -103,6 +104,7 @@ public class activity_map extends AppCompatActivity {
                     case  R.id.home:
                         startActivity(new Intent(getApplicationContext(),MainActivity.class));
                         overridePendingTransition(0,0);
+                        finish();
                         return  true;
                 }
                 return false;

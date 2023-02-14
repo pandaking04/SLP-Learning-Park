@@ -101,11 +101,13 @@ public class Profile extends AppCompatActivity {
                     case R.id.map:
                         startActivity(new Intent(getApplicationContext(),activity_map.class));
                         overridePendingTransition(0,0);
+                        finish();
                         return true;
 
                     case  R.id.home:
                         startActivity(new Intent(getApplicationContext(),MainActivity.class));
                         overridePendingTransition(0,0);
+                        finish();
                         return  true;
                 }
                 return false;

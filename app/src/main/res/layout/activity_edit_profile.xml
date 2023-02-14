@@ -95,7 +95,8 @@
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="20dp"
             android:background="@drawable/custom_input"
-            android:hint="    ชื่อผู้ใช้" />
+            android:padding="8dp"
+            android:hint="ชื่อผู้ใช้" />
 
         <EditText
             android:id="@+id/edit_email"
@@ -105,7 +106,8 @@
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="20dp"
             android:background="@drawable/custom_input"
-            android:hint="    อีเมล" />
+            android:padding="8dp"
+            android:hint="อีเมล" />
 
         <Button
             android:id="@+id/confirm_edit"

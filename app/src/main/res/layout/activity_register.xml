@@ -55,6 +55,7 @@
         android:background="@drawable/custom_input"
         android:layout_below="@+id/register_text"
         android:layout_marginBottom="20dp"
+        android:padding="8dp"
         android:layout_centerHorizontal="true"
         android:hint="อีเมล" />
 
@@ -65,6 +66,7 @@
         android:layout_below="@+id/register_email"
         android:layout_marginBottom="20dp"
         android:layout_width="350dp"
+        android:padding="8dp"
         android:layout_height="60dp"
         android:hint="ชื่อผู้ใช้" />
 
@@ -77,6 +79,7 @@
         android:layout_marginBottom="20dp"
         android:layout_below="@+id/register_username"
         android:layout_width="350dp"
+        android:padding="8dp"
         android:layout_height="60dp"
         />
 
@@ -89,6 +92,7 @@
         android:layout_marginBottom="20dp"
         android:layout_below="@+id/register_password"
         android:layout_width="350dp"
+        android:padding="8dp"
         android:layout_height="60dp"
         />
 

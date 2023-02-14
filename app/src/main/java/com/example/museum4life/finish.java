@@ -57,6 +57,32 @@ public class finish extends AppCompatActivity {
             }
         });
 
+        retry_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(building.equals("ancient")){
+                    Intent intent = new Intent(finish.this,ancient_building.class);
+                    startActivity(intent);
+                    finish();
+                }
+                if(building.equals("art")){
+                    Intent intent = new Intent(finish.this,art_building.class);
+                    startActivity(intent);
+                    finish();
+                }
+                if(building.equals("plant")){
+                    Intent intent = new Intent(finish.this,plant_building.class);
+                    startActivity(intent);
+                    finish();
+                }
+                if(building.equals("butterfly")){
+                    Intent intent = new Intent(finish.this,butterfly_building.class);
+                    startActivity(intent);
+                    finish();
+                }
+            }
+        });
+
         home_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

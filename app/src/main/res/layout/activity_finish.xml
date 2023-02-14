@@ -33,17 +33,17 @@
         android:textStyle="bold"/>
 
 
-            <Button
-                android:layout_marginTop="550dp"
-                android:id="@+id/again_btn"
-                android:layout_width="200dp"
-                android:layout_height="65dp"
-                android:backgroundTint="@color/museum"
-                android:text="ชมอีกครั้ง"
-                android:drawableRight="@drawable/ic_return"
-                android:paddingRight="30dp"
-                android:layout_centerHorizontal="true"
-                android:textSize="19dp"/>
+    <Button
+        android:id="@+id/again_btn"
+        android:layout_width="200dp"
+        android:layout_height="65dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="550dp"
+        android:backgroundTint="@color/museum"
+        android:drawableRight="@drawable/ic_return"
+        android:paddingRight="30dp"
+        android:text="ชมอีกครั้ง"
+        android:textSize="19dp" />
 
     <Button
         android:id="@+id/comment_btn"

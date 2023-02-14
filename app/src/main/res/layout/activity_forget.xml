@@ -48,6 +48,7 @@
     <EditText
         android:id="@+id/forget_edit"
         android:layout_below="@+id/forget_txt"
+        android:padding="8dp"
         android:layout_width="350dp"
         android:layout_height="60dp"
         android:layout_centerHorizontal="true"
@@ -57,6 +58,7 @@
         android:textColor="@color/black"/>
 
     <Button
+        android:id="@+id/forget_confirm"
         android:layout_below="@id/forget_edit"
         android:layout_width="250dp"
         android:layout_height="70dp"

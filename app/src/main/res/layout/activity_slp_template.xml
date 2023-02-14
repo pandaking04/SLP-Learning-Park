@@ -67,15 +67,18 @@
 
         <TextView
             android:id="@+id/detail_preview"
+            android:padding="7dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Test"
             android:layout_below="@+id/image_preview"
             android:layout_centerHorizontal="true"
+            android:layout_marginStart="5dp"
             android:layout_marginTop="20dp"
-            android:textSize="17dp"
+            android:layout_marginBottom="5dp"
+            android:text="Test"
             android:textAlignment="gravity"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+            android:textSize="17dp" />
 
         <View
             android:layout_marginTop="40dp"
@@ -95,18 +98,22 @@
 
             <Button
                 android:id="@+id/review_btn"
-                android:layout_width="140dp"
-                android:layout_height="wrap_content"
+                android:layout_width="170dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="40dp"
                 android:layout_marginRight="100dp"
-                android:text="Review"
+                android:text="รีวิว"
                 android:backgroundTint="@color/museum"
                 />
 
             <Button
                 android:id="@+id/start_btn"
-                android:layout_width="140dp"
-                android:layout_height="wrap_content"
-                android:text="Start"
+                android:layout_width="170dp"
+                android:layout_height="70dp"
+
+                android:text="เริ่มการเยี่ยมชม"
+                android:textSize="14dp"
                 android:backgroundTint="@color/museum"/>
         </LinearLayout>
 

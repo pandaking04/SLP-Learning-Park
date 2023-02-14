@@ -26,8 +26,6 @@ public class map_info extends AppCompatActivity {
         Bundle extras = intent.getExtras();
         String zone_detail = extras.getString("zone_des");
         String zone_name = extras.getString("zone_name");
-        String check_AR = extras.getString("ar_check");
-        String zone_No = extras.getString("zoneNo");
         String building = extras.getString("building");
         int image_link = getIntent().getIntExtra("image", 0);
 
@@ -73,8 +71,10 @@ public class map_info extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(map_info.this,QRCodeScanner.class);
-                intent.putExtra("checkAR", check_AR);
                 intent.putExtra("building", building);
+                intent.putExtra("zone_name", zone_name);
+                intent.putExtra("zone_des", zone_detail);
+                intent.putExtra("image", image_link);
                 startActivity(intent);
 
             }

@@ -36,6 +36,10 @@ public class QRCodeScanner extends AppCompatActivity implements ZXingScannerView
 
 
 
+
+
+
+
         int currentApiVersion = Build.VERSION.SDK_INT;
         if(currentApiVersion >= Build.VERSION_CODES.M){
             if(checkPermission()){
@@ -113,7 +117,6 @@ public class QRCodeScanner extends AppCompatActivity implements ZXingScannerView
         new AlertDialog.Builder(QRCodeScanner.this)
                 .setMessage(message)
                 .setPositiveButton("OK",OKListiner)
-                .setNegativeButton("Cancle",null)
                 .create()
                 .show();
     }
@@ -122,8 +125,11 @@ public class QRCodeScanner extends AppCompatActivity implements ZXingScannerView
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
         String building = extras.getString("building");
+        String zone_detail = extras.getString("zone_des");
+        String zone_name = extras.getString("zone_name");
+        int image_link = getIntent().getIntExtra("image", 0);
         final String rawResult = result.getText();
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);;
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Scan Result");
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
@@ -133,20 +139,18 @@ public class QRCodeScanner extends AppCompatActivity implements ZXingScannerView
                     Intent intent = new Intent(QRCodeScanner.this, info_with_ar.class);
                     intent.putExtra("name", result.getText());
                     intent.putExtra("building", building);
+                    intent.putExtra("zone_des", zone_detail);
+                    intent.putExtra("zone_name", zone_name);
+                    intent.putExtra("image", image_link);
                     startActivity(intent);
 
 
                 //ScannerView.resumeCameraPreview(QRCodeScanner.this);
             }
         });
-        builder.setNegativeButton("Cancle", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                onDestroy();
-            }
-        });
 
-        builder.setMessage(result.getText());
+
+        builder.setMessage("สแกนเสร็จสิ้น");
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
     }

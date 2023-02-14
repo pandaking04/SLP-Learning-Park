@@ -3,6 +3,7 @@ package com.example.museum4life;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
@@ -23,6 +24,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class model_ar extends AppCompatActivity {
+    ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +45,10 @@ public class model_ar extends AppCompatActivity {
         findViewById(R.id.downloadBtn).setOnClickListener(v -> {
             try{
                 File file = File.createTempFile("test", "glb");
+                progressDialog = new ProgressDialog(this);
+                progressDialog.setCancelable(false);
+                progressDialog.setMessage("กำลังโหลดรอสักครู่...");
+                progressDialog.show();
 
                 modelRef.getFile(file).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
 
@@ -79,7 +85,9 @@ public class model_ar extends AppCompatActivity {
                 .setRegistryId(file.getPath())
                 .build()
                 .thenAccept(modelRenderable -> {
-                    Toast.makeText(this,"Model built", Toast.LENGTH_SHORT).show();
+                    if(progressDialog.isShowing())
+                        progressDialog.dismiss();
+                    Toast.makeText(this,"โหลดโมเดลสำเร็จ", Toast.LENGTH_SHORT).show();
                     renderable = modelRenderable;
                 });
     }

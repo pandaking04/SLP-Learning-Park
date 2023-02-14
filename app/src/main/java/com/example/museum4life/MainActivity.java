@@ -91,11 +91,13 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.profile:
                         startActivity(new Intent(getApplicationContext(),Profile.class));
                         overridePendingTransition(0,0);
+                        finish();
                         return true;
 
                     case R.id.map:
                         startActivity(new Intent(getApplicationContext(),activity_map.class));
                         overridePendingTransition(0,0);
+                        finish();
                         return true;
 
 
