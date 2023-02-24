@@ -124,6 +124,7 @@ public class ancient_building extends AppCompatActivity {
                         Intent intent = new Intent(ancient_building.this,finish.class);
                         intent.putExtra("building", "ancient");
                         startActivity(intent);
+                        finish();
                     }
                 });
 

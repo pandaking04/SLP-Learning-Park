@@ -11,8 +11,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@drawable/square_bg">
+        android:background="@drawable/square_bg"
+        android:orientation="vertical">
 
 
         <com.google.android.material.appbar.AppBarLayout
@@ -43,16 +43,11 @@
                 <ImageButton
                     android:id="@+id/audio_btn"
                     android:layout_width="50dp"
+                    android:layout_marginTop="5dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/ic_baseline_volume_white"
+                    android:layout_marginLeft="360dp"
                     android:background="@color/museum"
-                    android:layout_marginLeft="350dp"/>
-
-
-
-
-
-
+                    android:src="@drawable/ic_baseline_volume_white" />
 
 
             </RelativeLayout>
@@ -84,28 +79,41 @@
         android:layout_marginBottom="15dp"
          />
 
-    <TextView
-        android:id="@+id/things_des"
+    <ScrollView
+        android:id="@+id/scrollable"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Description"
-        android:layout_centerHorizontal="true"
+        android:layout_height="250dp"
         android:layout_below="@+id/things_img"
-        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/info_squre">
 
-        android:textSize="20dp"
-        android:gravity="center"
-        android:layout_marginTop="13dp"/>
+        <TextView
+            android:id="@+id/things_des"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/things_img"
+            android:layout_centerHorizontal="true"
+
+            android:autoSizeTextType="uniform"
+            android:gravity="start"
+            android:padding="20dp"
+            android:text="Description"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+    </ScrollView>
+
 
 
 
     <Button
+        android:layout_below="@+id/scrollable"
         android:layout_centerHorizontal="true"
         android:id="@+id/showAR"
         android:layout_width="500dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="300dp"
-        android:layout_marginTop="700dp"
+       android:layout_marginTop="40dp"
         android:layout_gravity="end"
         android:drawableRight="@drawable/ic_ar"
         app:fabSize="normal"

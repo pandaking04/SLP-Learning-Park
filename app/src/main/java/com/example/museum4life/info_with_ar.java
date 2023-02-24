@@ -45,6 +45,7 @@ public class info_with_ar extends AppCompatActivity {
     Button showAR;
     String img_sauce = "test";
     TextToSpeech t1;
+    int isSpeak = 0;
 
 
     ImageView things_img;
@@ -139,6 +140,7 @@ public class info_with_ar extends AppCompatActivity {
                             Intent intent = new Intent(info_with_ar.this,model_ar.class);
                             intent.putExtra("model", value.getString("name"));
                             startActivity(intent);
+                            finish();
                         }else{
                             AlertDialog.Builder builder = new AlertDialog.Builder(info_with_ar.this);
                             builder.setTitle("ขออภัย");
@@ -162,6 +164,8 @@ public class info_with_ar extends AppCompatActivity {
                     public void onClick(View v) {
                         Log.d("sound", value.getString("description"));
                         t1.speak(value.getString("description"), TextToSpeech.QUEUE_FLUSH, null);
+
+
                     }
                 });
             }

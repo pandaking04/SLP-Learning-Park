@@ -12,12 +12,14 @@
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Museum4Life/app/src/main/res/drawable/foreground_white2.xml" value="0.2703125" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Museum4Life/app/src/main/res/drawable/foreground_white3.xml" value="0.2703125" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Museum4Life/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.2703125" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Museum4Life/app/src/main/res/drawable/ic_baseline_volume_white.xml" value="0.24027777777777778" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Museum4Life/app/src/main/res/drawable/ic_home.xml" value="0.2703125" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Museum4Life/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2703125" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Museum4Life/app/src/main/res/drawable/ic_logout.xml" value="0.2703125" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Museum4Life/app/src/main/res/drawable/ic_people.xml" value="0.2703125" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Museum4Life/app/src/main/res/drawable/ic_person.xml" value="0.2703125" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Museum4Life/app/src/main/res/drawable/ic_temp_img.xml" value="0.2703125" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Museum4Life/app/src/main/res/drawable/info_squre.xml" value="0.17685185185185184" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Museum4Life/app/src/main/res/drawable/map_background.xml" value="0.2703125" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Museum4Life/app/src/main/res/drawable/new_back.xml" value="0.2703125" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Museum4Life/app/src/main/res/drawable/rounded_edit_text.xml" value="0.2703125" />
@@ -58,6 +60,7 @@
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Museum4Life/app/src/main/res/layout/comment_view.xml" value="0.22592592592592592" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Museum4Life/app/src/main/res/layout/fragment_home.xml" value="0.1598731884057971" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Museum4Life/app/src/main/res/layout/fragment_profile.xml" value="0.264" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Museum4Life/app/src/main/res/layout/info_squre.xml" value="0.22592592592592592" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Museum4Life/app/src/main/res/layout/item.xml" value="0.264" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Museum4Life/app/src/main/res/layout/main_nav_drawer.xml" value="0.24456521739130435" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Museum4Life/app/src/main/res/layout/main_toolbar.xml" value="0.1" />

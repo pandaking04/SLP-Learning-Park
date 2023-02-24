@@ -42,6 +42,8 @@ public class model_ar extends AppCompatActivity {
 
         ArFragment arFragment = (ArFragment) getSupportFragmentManager().findFragmentById(R.id.arFragment);
 
+
+
         findViewById(R.id.downloadBtn).setOnClickListener(v -> {
             try{
                 File file = File.createTempFile("test", "glb");
